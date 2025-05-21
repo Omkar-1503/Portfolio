@@ -45,7 +45,7 @@ export default function Hero3D() {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-center text-white p-8 bg-black/30 backdrop-blur-md rounded-lg"
         >
-          <h1 className="text-5xl font-bold mb-4">John Doe</h1>
+          <h1 className="text-5xl font-bold mb-4">Omkar Khadakkar</h1>
           <p className="text-xl mb-6">Web Developer & 3D Enthusiast</p>
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full pointer-events-auto">
             View My Work
