@@ -51,7 +51,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-md mx-auto">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-1">
+        <label htmlFor="name" className="block text-sm font-medium mb-1 text-white">
           Name
         </label>
         <Input
@@ -60,12 +60,13 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-white/5 backdrop-blur-sm border-white/10 text-white placeholder:text-gray-400"
+          placeholder="Your name"
         />
       </div>
       
       <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-1">
+        <label htmlFor="email" className="block text-sm font-medium mb-1 text-white">
           Email
         </label>
         <Input
@@ -75,12 +76,13 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="flex h-10 w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-white/5 backdrop-blur-sm border-white/10 text-white placeholder:text-gray-400"
+          placeholder="your.email@example.com"
         />
       </div>
       
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-1">
+        <label htmlFor="message" className="block text-sm font-medium mb-1 text-white">
           Message
         </label>
         <Textarea
@@ -90,11 +92,16 @@ export default function ContactForm() {
           onChange={handleChange}
           rows={5}
           required
-          className="flex min-h-[80px] w-full rounded-md border border-gray-300 bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-white/5 backdrop-blur-sm border-white/10 text-white placeholder:text-gray-400 min-h-[120px]"
+          placeholder="Your message"
         />
       </div>
       
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
+      <Button 
+        type="submit" 
+        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all" 
+        disabled={isSubmitting}
+      >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </Button>
     </form>
